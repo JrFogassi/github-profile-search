@@ -35,8 +35,10 @@ export const GithubSearch = () => {
                     <button type="submit" className="search-button"><img src={SearchIcon} alt="" className="search-icon"/></button>
                 </div>               
             </form>
-
+            
+            <div className="error-container">
             {error && <p className="error-message">{error}</p>}
+            </div>   
             {profile && (
                 <div className="profile-container">
                     <div className="profile-content">
