@@ -18,7 +18,7 @@ export const GithubSearch = () => {
             setError(null);
         } catch (error) {
             setProfile(null);
-            setError('Nenhum perfil foi encontrado com esse nome de usuário.Tente novamente')
+            setError('Nenhum perfil foi encontrado com esse nome de usuário. \nTente novamente');
         }
     }
     return (
@@ -36,9 +36,11 @@ export const GithubSearch = () => {
                 </div>               
             </form>
             
+            {error && (
             <div className="error-container">
-            {error && <p className="error-message">{error}</p>}
-            </div>   
+            <p className="error-message">{error}</p>
+            </div> 
+            )}  
             {profile && (
                 <div className="profile-container">
                     <div className="profile-content">
